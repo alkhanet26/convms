@@ -47,6 +47,21 @@ sleep 2
 sh /sbin/tools
 fi
 }
+echo -e "$Y"
+cvms(){
+read -p "Melihat Hasil Convert ? " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/vmess.yaml
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
 
 
 banner(){
@@ -60,7 +75,8 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$Y                    ALKHANET                      $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
-echo -e "$DB **$G Convert vmess to clash             *   tools v   $DB**"
+echo -e "$DB **$G Convert vmess to clash             *    tools v  $DB**"
+echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
 echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
@@ -75,6 +91,12 @@ vms;exit
 ;;
 esac
 
+case $1 in
+"cvms")
+cvms;exit
+;;
+esac
+
 clear
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
@@ -85,7 +107,8 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$Y                    ALKHANET                      $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
-echo -e "$DB **$G Convert vmess to clash             *   tools v   $DB**"
+echo -e "$DB **$G Convert vmess to clash             *    tools v  $DB**"
+echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
 echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
