@@ -40,7 +40,7 @@ sleep 2
 clear
 v2ray-tools vmess2config --url $an > /root/in.json
 json2yaml /root/in.json /root/out.yaml
-grep -e vmess -e address -e port -e id -e alterId -e path /root/out.yaml > /etc/openclash/config/vmess.yaml
+grep -e vmess -e address -e port -e id -e alterId -e path /root/out.yaml > /etc/openclash/vmess.yaml
 rm /root/in.json
 rm /root/out.yaml
 sleep 2
