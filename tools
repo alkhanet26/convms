@@ -1,0 +1,95 @@
+#!/bin/bash
+
+clear
+#-- colors --#
+#R='\e[1;31m' #RED
+#G='\e[1;32m' #GREEN
+#B='\e[1;34m' #BLUE
+#Y='\e[1;33m' #YELLOW
+#C='\e[1;36m' #CYAN
+W='\e[1;37m' #WHITE
+##############
+
+#-- colors v2 --#
+R='\e[31;1m' #RED
+G='\e[32;1m' #GREEN
+Y='\e[33;1m' #YELLOW
+DB='\e[34;1m' #DARKBLUE
+P='\e[35;1m' #PURPLE
+LB='\e[36;1m' #LIGHTBLUE
+
+#-- colors v3 --#
+BR='\e[3;31m' #RED
+BG='\e[3;32m' #GREEN
+BY='\e[3;33m' #YELLOW
+BDB='\e[3;34m' #DARKBLUE
+BP='\e[3;35m' #PURPLE
+BLB='\e[3;36m' #LIGHTBLUE
+
+echo -e "$Y"
+vms(){
+read -p "Masukan Url (ex:vmess://xxx) : " an
+if [[ $an == "n" || $an == "N"  ]]; then
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+else
+echo -e "Converting Vmess"
+sleep 2
+clear
+v2ray-tools vmess2config --url $an > /root/in.json
+json2yaml /root/in.json /root/out.yaml
+grep -e vmess -e address -e port -e id -e alterId -e path /root/out.yaml > /etc/openclash/config/vmess.yaml
+rm /root/in.json
+rm /root/out.yaml
+sleep 2
+sh /sbin/tools
+fi
+}
+
+
+banner(){
+clear
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e " **                                                  **"
+echo -e "$DB **$R          SELAMAT DATANG VMESS CONVERTER          $DB**"
+echo -e " **                                                  **"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y                    ALKHANET                      $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
+echo -e "$DB **$G Convert vmess to clash             * sh tools v $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
+echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e "$Y"
+}
+
+case $1 in
+"v")
+vms;exit
+;;
+esac
+
+clear
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e " **                                                  **"
+echo -e "$DB **$R          SELAMAT DATANG VMESS CONVERTER          $DB**"
+echo -e " **                                                  **"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y                    ALKHANET                      $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
+echo -e "$DB **$G Convert vmess to clash             * sh tools v $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
+echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e "$Y"
+exit
