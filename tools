@@ -28,7 +28,7 @@ BLB='\e[3;36m' #LIGHTBLUE
 
 echo -e "$Y"
 vms(){
-read -p "Ingin Convert Vmess ? " an
+read -p "Ingin Convert Vmess ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
 /sbin/vmess
 else
@@ -40,7 +40,7 @@ fi
 }
 echo -e "$Y"
 cvms(){
-read -p "Melihat Hasil Convert ? " an
+read -p "Melihat Hasil Convert ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
@@ -55,7 +55,7 @@ fi
 }
 echo -e "$Y"
 up(){
-read -p "Update versi Tools Converter ? " an
+read -p "Update versi Tools Converter ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Updating Tools"
 sleep 2
