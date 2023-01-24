@@ -102,6 +102,7 @@ echo -e "Updating Tools"
 sleep 2
 clear
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 7777 /sbin/vmess
 else
 echo -e "kembali ke halaman awal..."
 sleep 2
