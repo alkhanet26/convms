@@ -44,8 +44,7 @@ toos up
 ```
 
 Next development
-converter for trojan
-converter for vless
+converter for trojan and vless
 
 Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
