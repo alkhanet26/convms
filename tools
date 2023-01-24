@@ -94,6 +94,22 @@ sh /sbin/tools
 exit
 fi
 }
+echo -e "$Y"
+up(){
+read -p "Update versi Tools Converter ? " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+echo -e "Updating Tools"
+sleep 2
+clear
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+
 
 
 banner(){
@@ -109,9 +125,10 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
+echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
-echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
+echo -e "$DB **$B                VERSION ALPHA 1.1                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 echo -e "$Y"
@@ -129,6 +146,12 @@ cvms;exit
 ;;
 esac
 
+case $1 in
+"up")
+up;exit
+;;
+esac
+
 clear
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
@@ -141,9 +164,10 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
+echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
-echo -e "$DB **$B                 VERSI ALPHA 1.0                  $DB**"
+echo -e "$DB **$B                VERSION ALPHA 1.1                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 echo -e "$Y"
