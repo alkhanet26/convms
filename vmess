@@ -48,4 +48,5 @@ echo -e "  udp:$udp1"
 
 printout > /etc/openclash/vmess.yaml
 #rm /tmp/cfgvms.json && rm /tmp/cfgvms2.yaml
+/sbin/tools
 
