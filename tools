@@ -40,7 +40,39 @@ sleep 2
 clear
 v2ray-tools vmess2config --url $an > /root/in.json
 json2yaml /root/in.json /root/out.yaml
-grep -e vmess -e address -e port -e id -e alterId -e path /root/out.yaml > /etc/openclash/vmess.yaml
+name1=$(cat /root/out.yaml | grep tag | cut -d: -f2| awk 'NR==2')
+address1=$(cat /root/out.yaml | grep address | cut -d: -f2| awk 'NR==2')
+port1=$(cat /root/out.yaml | grep port | cut -d: -f2| awk 'NR==2')
+type1=$(cat /root/out.yaml | grep type | cut -d: -f2| awk 'NR==1')
+uuid1=$(cat /root/out.yaml | grep id | cut -d: -f2| awk 'NR==1')
+alterid1=$(cat /root/out.yaml | grep alterId | cut -d: -f2| awk 'NR==1')
+chiper1=$(cat /root/out.yaml | grep security | cut -d: -f2| awk 'NR==1')
+#tls1=$(cat /root/out.yaml | grep security | cut -d: -f2| awk 'NR==2')
+#skip1=$(cat /root/out.yaml | grep type | cut -d: -f2| awk 'NR==1')
+#servername1=$(cat /root/out.yaml | grep type | cut -d: -f2| awk 'NR==1')
+network1=$(cat /root/out.yaml | grep network | cut -d: -f2| awk 'NR==1')
+path1=$(cat /root/out.yaml | grep path | cut -d: -f2| awk 'NR==1')
+host1=$(cat /root/out.yaml | grep Host | cut -d: -f2| awk 'NR==1')
+udp1=$(cat /root/out.yaml | grep udp | cut -d: -f2| awk 'NR==1')
+printout(){
+echo -e "proxies: "
+echo -e "- name :$name1"
+echo -e "  server:$address1"
+echo -e "  port:$port1"
+echo -e "  type:$type1"
+echo -e "  uuid:$uuid1"
+echo -e "  alterId:$alterid1"
+echo -e "  cipher:$chiper1"
+echo -e "  tls: isi sendiri(true/false)"
+echo -e "  skip-cert-verify: true"
+echo -e "  servername: isi sendri(bug/domain)"
+echo -e "  network:$network1"
+echo -e "  ws-opts:"
+echo -e "    path:$path1"
+echo -e "    headers:"
+echo -e "      Host:$host1"
+echo -e "  udp:$udp1"
+printout > /etc/openclash/vmess.yaml
 rm /root/in.json
 rm /root/out.yaml
 sleep 2
