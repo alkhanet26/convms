@@ -53,7 +53,7 @@ fi
 echo -e "$Y"
 result(){
 read -p "Melihat Hasil Convert ? (y/n) " an
-if [[ $an == "v" || $an == "V"  ]]; then
+if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
