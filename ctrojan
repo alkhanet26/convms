@@ -21,7 +21,7 @@ printout(){
 echo -e "proxies: "
 echo -e "- name: $name1"
 echo -e "  type: $type1"
-echo -e "  server: $host1"
+echo -e "  server: $address1"
 echo -e "  port: $port1"
 echo -e "  password: $password1"
 echo -e "  sni: isi sendiri(bug/domain)"
