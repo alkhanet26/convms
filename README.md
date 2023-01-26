@@ -34,7 +34,7 @@ setelah selesai,,,
 config ``vmess.yaml`` akan berada di folder ``/etc/openclash/vmess.yaml``
 atau ketik di terminal
 ```
-tools cvms
+tools vm
 ```
 silahkan di copy isinya untuk di paste dan disesuaikan dengan format config vmess di openclash
 
