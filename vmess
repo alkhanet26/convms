@@ -7,7 +7,7 @@ json2yaml /tmp/cfgvms.json /tmp/cfgvms2.yaml
 
 
 
-name1=$(cat /tmp/cfgvms2.yaml | grep tag | cut -d: -f2| awk 'NR==2')
+name1=$(cat /tmp/cfgvms2.yaml | grep tag | cut -d: -f2| cut -d_ -f1 | awk 'NR==2')
 address1=$(cat /tmp/cfgvms2.yaml | grep address | cut -d: -f2| awk 'NR==2')
 port1=$(cat /tmp/cfgvms2.yaml | grep port | cut -d: -f2| awk 'NR==2')
 type1=$(cat /tmp/cfgvms2.yaml | grep type | cut -d: -f2| awk 'NR==1')
