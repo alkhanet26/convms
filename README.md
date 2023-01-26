@@ -42,7 +42,7 @@ Untuk update tools ini ketik
 ```
 toos up
 ```
-
+```
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 echo -e " **                                                  **"
@@ -63,7 +63,7 @@ echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
 echo -e "$DB **$B                VERSION ALPHA 1.2                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
-
+```
 
 Next development
 
