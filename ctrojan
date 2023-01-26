@@ -3,7 +3,7 @@
 plus=$('=')
 
 read -p "Masukan Url (ex:vmess://xxx) : " link
-cp $link$plus > /tmp/tjn.yaml
+$link$plus > /tmp/tjn.yaml
 
 
 name1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1')
