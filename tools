@@ -65,7 +65,6 @@ sleep 2
 sh /sbin/tools
 exit
 fi
-fi
 }
 echo -e "$Y"
 up(){
