@@ -70,7 +70,7 @@ Next development
 
  - converter vless
 
-Credit
+**Credit**
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
 - Script v2ray-tools by [kltk](https://github.com/kltk)
 - Script jsontoyaml by [drbild](https://github.com/drbild)
