@@ -51,18 +51,14 @@ exit
 fi
 }
 echo -e "$Y"
-cvms(){
-read -p "Melihat Hasil Convert ? (v/V=vmess t/T=trojan n=kembali ke menu awal) " an
+result(){
+read -p "Melihat Hasil Convert ? (y/n) " an
 if [[ $an == "v" || $an == "V"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vmess.yaml
-if [[ $an == "t" || $an == "T"  ]]; then
-echo -e "Looking for Config"
-sleep 2
-clear
-cat /etc/openclash/trojan.yaml
+cat /etc/openclshh/trojan.yaml
 else
 echo -e "kembali ke halaman awal..."
 sleep 2
@@ -106,7 +102,7 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Convert trojan to yaml             *    tools t  $DB**"
-echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
+echo -e "$DB **$G Melihat hasil convert              *    tools r  $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
@@ -130,8 +126,8 @@ tj;exit
 esac
 
 case $1 in
-"cvms")
-cvms;exit
+"r")
+result;exit
 ;;
 esac
 
@@ -153,7 +149,7 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Convert trojan to yaml             *    tools v  $DB**"
-echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
+echo -e "$DB **$G Melihat hasil convert              *    tools r  $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
