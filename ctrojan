@@ -11,7 +11,7 @@ address1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d@ -f2 | cut -d:
 port1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
 type1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1')
 password1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d@ -f1 | cut -b 10-45)
-network1=$(cat /tmp/tjn.yaml | grep -o ws /tmp/tjn.yaml)
+network1=$(cat /tmp/tjn.yaml | grep -o '=ws' /tmp/tjn.yaml | cut -d'=' -f2)
 network2=$(cat /tmp/tjn.yaml | grep -o grpc /tmp/tjn.yaml)
 path1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d% -f2 | cut -d'&" -f1 | cut -d# -f1 | cut -b 3-15)
 host1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d'&' -f3 | cut -b 6-30)
