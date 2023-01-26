@@ -51,13 +51,28 @@ exit
 fi
 }
 echo -e "$Y"
-result(){
+rvmess(){
 read -p "Melihat Hasil Convert ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vmess.yaml
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+echo -e "$Y"
+rtrojan
+read -p "Melihat Hasil Convert ? (y/n) " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/trojan.yaml
 else
 echo -e "kembali ke halaman awal..."
 sleep 2
@@ -100,7 +115,8 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Convert trojan to yaml             *    tools t  $DB**"
-echo -e "$DB **$G Melihat hasil convert              *    tools r  $DB**"
+echo -e "$DB **$G Melihat hasil convert (vmess)      *    tools vm $DB**"
+echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
@@ -124,8 +140,14 @@ tj;exit
 esac
 
 case $1 in
-"r")
-result;exit
+"vm")
+rvmess;exit
+;;
+esac
+
+case $1 in
+"tj")
+rtrojan;exit
 ;;
 esac
 
@@ -147,7 +169,8 @@ echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
 echo -e "$DB **$G Convert trojan to yaml             *    tools v  $DB**"
-echo -e "$DB **$G Melihat hasil convert              *    tools r  $DB**"
+echo -e "$DB **$G Melihat hasil convert              *    tools vm $DB**"
+echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
