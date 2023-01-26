@@ -58,7 +58,6 @@ echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vmess.yaml
-cat /etc/openclshh/trojan.yaml
 else
 echo -e "kembali ke halaman awal..."
 sleep 2
