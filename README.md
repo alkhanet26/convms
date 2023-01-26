@@ -1,8 +1,8 @@
 # YAML Converter
 
-**YAML Converter CLI openwrt (updated "TROJAN to YAML")**
+**YAML Converter CLI openwrt (WEBSOCKET VERSION)**
 
-Tools ini berfungsi sebagai converter link encode vmess menjadi format yaml untuk openclash
+Tools ini berfungsi sebagai converter link encode ``vmess-ws`` ``trojan-ws`` ``vless-ws`` menjadi format yaml untuk openclash
 dependencies yang di perlukan
 - node-npm
 - python3
