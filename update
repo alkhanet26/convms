@@ -5,10 +5,13 @@
 {
 an=$(grep -o 'VERSION ALPHA 2.0' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
 if [[ $an == "2.0" ]]; then
-echo "Checking Version" wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
+echo "Checking Version"
+sleep 3
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
+clear
 echo -e "YAML Converter Sudah Versi Terbaru ALPHA $an"
 echo -e "Kembali Ke Menu Awal"
-sleep 2
+sleep 3
 /sbin/tools
 else
 echo -e "Updating YAML Converter"
