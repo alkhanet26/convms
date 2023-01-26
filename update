@@ -1,0 +1,22 @@
+#!/bin/bash
+#This script by AlkhaNET (http://github.com/alkhanet26)
+
+
+{
+an=$(grep -o 'VERSION ALPHA 2.0' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
+if [[ $an == "2.0" ]]; then
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
+echo -e "YAML Converter Sudah Versi Terbaru ALPHA $an"
+echo -e "Kembali Ke Menu Awal"
+sleep 2
+/sbin/tools
+else
+echo -e "Updating YAML Converter"
+sleep 1
+clear
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
+clear
+sleep 2
+/sbin/tools up
+fi
+}
