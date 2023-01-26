@@ -68,7 +68,7 @@ echo -e "$DB ******************************************************"
 
 Next development
 
- - converter vless
+- ``trojan-gfw``
 
 **Credit**
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
