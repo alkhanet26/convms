@@ -117,6 +117,7 @@ clear
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 7777 /sbin/vmess
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 7777 /sbin/ctrojan
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 7777 /sbin/vless
 sleep 2
 /sbin/tools
 else
@@ -135,6 +136,7 @@ echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 echo -e " **                                                  **"
 echo -e "$DB **$R          SELAMAT DATANG YAML CONVERTER          $DB**"
+echo -e "$DB **$R                WEBSOCKET VERSION                $DB**"
 echo -e " **                                                  **"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y                    ALKHANET                      $DB**"
@@ -203,6 +205,7 @@ echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 echo -e " **                                                  **"
 echo -e "$DB **$R          SELAMAT DATANG YAML CONVERTER          $DB**"
+echo -e "$DB **$R                WEBSOCKET VERSION                $DB**"
 echo -e " **                                                  **"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y                    ALKHANET                      $DB**"
