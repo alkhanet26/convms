@@ -53,16 +53,22 @@ fi
 echo -e "$Y"
 cvms(){
 read -p "Melihat Hasil Convert ? (y/n) " an
-if [[ $an == "y" || $an == "Y"  ]]; then
+if [[ $an == "v" || $an == "V"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vmess.yaml
+if [[ $an == "t" || $an == "T"  ]]; then
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/trojan.yaml
 else
 echo -e "kembali ke halaman awal..."
 sleep 2
 sh /sbin/tools
 exit
+fi
 fi
 }
 echo -e "$Y"
