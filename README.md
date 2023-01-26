@@ -1,6 +1,6 @@
 # convms
 
-Converter Vmess CLI untuk openwrt
+Converter Vmess CLI untuk openwrt (updated "TROJAN to YAML")
 Tools ini berfungsi sebagai converter link encode vmess menjadi format yaml untuk openclash
 dependencies yang di perlukan
 - node-npm
@@ -43,9 +43,31 @@ Untuk update tools ini ketik
 toos up
 ```
 
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e " **                                                  **"
+echo -e "$DB **$R          SELAMAT DATANG VMESS CONVERTER          $DB**"
+echo -e " **                                                  **"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y                    ALKHANET                      $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
+echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
+echo -e "$DB **$G Convert trojan to yaml             *    tools v  $DB**"
+echo -e "$DB **$G Melihat hasil convert (vmess)      *    tools vm $DB**"
+echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
+echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
+echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
+echo -e "$DB **$B                VERSION ALPHA 1.2                 $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+
+
 Next development
 
- - converter for trojan and vless
+ - converter vless
 
 Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
