@@ -5,14 +5,14 @@ read -p "Masukan Url (ex:vmess://xxx) : " link
 echo $link$plus > /tmp/tjn.yaml
 
 
-plus=$('=')
+plus=$('#')
 name1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1')
 address1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d'&' -f3 | cut -b 6-30)
 port1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d: -f3 | cut -d/ -f1)
 type1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1')
 password1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d@ -f1 | cut -b 10-45)
 network1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d'&' -f2 | cut -b 6-10)
-path1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d= -f5 | sed 's/%2F/'/'')
+path1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d# -f5 | sed 's/%2F/'/'')
 host1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d'&' -f3 | cut -b 6-30)
 
 
