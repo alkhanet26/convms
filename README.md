@@ -1,6 +1,6 @@
 # convms
 
-Converter Vmess CLI untuk openwrt (updated "TROJAN to YAML")
+``Converter Vmess CLI untuk openwrt (updated "TROJAN to YAML")``
 Tools ini berfungsi sebagai converter link encode vmess menjadi format yaml untuk openclash
 dependencies yang di perlukan
 - node-npm
