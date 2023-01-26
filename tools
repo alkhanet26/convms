@@ -39,6 +39,18 @@ exit
 fi
 }
 echo -e "$Y"
+tj(){
+read -p "Ingin Convert Trojan ? (y/n) " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+/sbin/ctrojan
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+echo -e "$Y"
 cvms(){
 read -p "Melihat Hasil Convert ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
@@ -86,6 +98,7 @@ echo -e "$DB **$Y                    ALKHANET                      $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
+echo -e "$DB **$G Convert trojan to yaml             *    tools t  $DB**"
 echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
@@ -100,6 +113,12 @@ echo -e "$Y"
 case $1 in
 "v")
 vms;exit
+;;
+esac
+
+case $1 in
+"t")
+tj;exit
 ;;
 esac
 
@@ -126,6 +145,7 @@ echo -e "$DB **$Y                    ALKHANET                      $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
 echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
+echo -e "$DB **$G Convert trojan to yaml             *    tools v  $DB**"
 echo -e "$DB **$G Melihat hasil convert              *  tools cvms $DB**"
 echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
