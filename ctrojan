@@ -2,7 +2,7 @@
 
 
 read -p "Masukan Url (ex:vmess://xxx) : " link
-sed 's/$link$plus/g' > /tmp/tjn.yaml
+echo $link$plus > /tmp/tjn.yaml
 
 
 plus=$('=')
