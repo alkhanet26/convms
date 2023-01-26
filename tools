@@ -66,7 +66,7 @@ exit
 fi
 }
 echo -e "$Y"
-rtrojan
+rtrojan(){
 read -p "Melihat Hasil Convert ? (y/n) " an
 if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
