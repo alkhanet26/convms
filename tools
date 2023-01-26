@@ -52,7 +52,7 @@ fi
 }
 echo -e "$Y"
 cvms(){
-read -p "Melihat Hasil Convert ? (y/n) " an
+read -p "Melihat Hasil Convert ? (v/V=vmess t/T=trojan n=kembali ke menu awal) " an
 if [[ $an == "v" || $an == "V"  ]]; then
 echo -e "Looking for Config"
 sleep 2
