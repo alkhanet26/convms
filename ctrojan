@@ -1,6 +1,6 @@
 #!/bin/bash
 
-plus=$("=")
+plus=$('=')
 
 read -p "Masukan Url (ex:vmess://xxx) : " link
 cp $link$plus > /tmp/tjn.yaml
