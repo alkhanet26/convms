@@ -15,7 +15,7 @@ sleep 3
 clear
 echo -e "YAML Converter Sudah Versi Terbaru ALPHA $an"
 echo -e "Kembali Ke Menu Awal"
-sleep 3
+sleep 5
 /sbin/tools
 else
 echo -e "Updating YAML Converter"
