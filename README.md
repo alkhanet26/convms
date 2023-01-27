@@ -64,7 +64,7 @@ echo -e "$DB **$G Update Converter Tools             *   tools up  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           VMESS CONVERTER BY ALKHANET            $DB**"
 echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
-echo -e "$DB **$B                VERSION ALPHA 2.0                 $DB**"
+echo -e "$DB **$B                VERSION ALPHA 2.1                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
 ```
