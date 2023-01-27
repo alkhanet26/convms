@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script by AlkhaNET (http://github.com/alkhanet26)
-# VERSION ALPHA 2.1
+# VERSION ALPHA 2.2
 
 
 {
@@ -8,7 +8,7 @@ echo -e "Downloadin Updater"
 sleep 2
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
 clear
-an=$(grep -o 'VERSION ALPHA 2.1' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
+an=$(grep -o 'VERSION ALPHA 2.2' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
 if [[ $an == "2.1" ]]; then
 echo "Checking Version"
 sleep 3
