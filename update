@@ -5,10 +5,10 @@
 {
 echo -e "Downloadin Updater"
 sleep 2
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
 clear
-an=$(grep -o 'VERSION ALPHA 2.0' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
-if [[ $an == "2.0" ]]; then
+an=$(grep -o 'VERSION ALPHA 2.1' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
+if [[ $an == "2.1" ]]; then
 echo "Checking Version"
 sleep 3
 clear
@@ -20,6 +20,7 @@ else
 echo -e "Updating YAML Converter"
 sleep 1
 clear
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
 clear
 sleep 2
