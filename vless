@@ -11,7 +11,7 @@ port1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d: -f3 | cut -d/ -f1
 type1=$(cat /tmp/vls.yaml | grep vless | cut -d: -f1| awk 'NR==1')
 uuid1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f1 | cut -b 10-45)
 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1 | cut -d# -f1)
-path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' < /tmp/vls.yaml | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3f+/+g'| sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
+path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' < /tmp/vls.yaml | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3F+/+g' | sed 's+%3f+/+g' | sed 's+%3D+/+g' | sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
 host1=$(cat /tmp/vls.yaml | awk -F 'host=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1)
 
 
