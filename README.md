@@ -64,16 +64,18 @@ echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
 echo -e "$DB **$G Melihat hasil convert (vless)      *    tools vls$DB**"
 echo -e "$DB **$G Update Converter Tools             *    update   $DB**"
 echo -e "$DB ******************************************************"
-echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET            $DB**"
+echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET             $DB**"
 echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
-echo -e "$DB **$B                VERSION ALPHA 2.1                 $DB**"
+echo -e "$DB **$B                VERSION ALPHA 2.2                 $DB**"
 echo -e "$DB ******************************************************"
+echo -e "$DB **$R                     CHANGELOG                    $DB**"
+echo -e "$DB **$R                 -Adding trojan-gfw               $DB**"
 echo -e "$DB ******************************************************"
+echo -e "$Y"
 ```
 
-Next development
-
-- ``trojan-gfw``
+# CHANGELOG
+- Adding trojan-gfw
 
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
