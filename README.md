@@ -8,6 +8,7 @@ dependencies yang di perlukan
 - python3
 - python3-pip
 
+# INSTALASI YAML Converter
 Sebelum memasang tools ini pastikan jaringan internet stabil atau gunakan kuota reguler,,
 ketik atau copy ini ke terminal
 ```
@@ -73,10 +74,10 @@ Next development
 
 - ``trojan-gfw``
 
-**Credit**
+# Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
 - Script v2ray-tools by [kltk](https://github.com/kltk)
 - Script jsontoyaml by [drbild](https://github.com/drbild)
 
-**SUPPORT ME**
+# Support Me
 - [Beli Kopi](https://saweria.co/alkhanet)
