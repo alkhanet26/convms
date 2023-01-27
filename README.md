@@ -1,6 +1,6 @@
 # YAML Converter
 
-**YAML Converter CLI openwrt (WEBSOCKET VERSION)**
+**YAML Converter CLI OpenWRT (WEBSOCKET VERSION)**
 
 Tools ini berfungsi sebagai converter link encode ``vmess-ws`` ``trojan-ws`` ``vless-ws`` menjadi format yaml untuk openclash
 dependencies yang di perlukan
