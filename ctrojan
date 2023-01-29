@@ -86,7 +86,7 @@
 	echo -e "  port: $port1"
 	echo -e "  password: $password1"
 	echo -e "  skip-cert-verify: true"
-	echo -e "  sni: isi sendiri(bug/domain)"
+	echo -e "  sni: $bug1"
 	echo -e "  udp: true"
 	}
 	printoutgfw > /etc/openclash/trojan.yaml
