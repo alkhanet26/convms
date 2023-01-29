@@ -66,48 +66,24 @@ fi
 }
 echo -e "$Y"
 rvmess(){
-read -p "Melihat Hasil Convert ? (y/n) " an
-if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vmess.yaml
-else
-echo -e "kembali ke halaman awal..."
-sleep 2
-sh /sbin/tools
-exit
-fi
 }
 echo -e "$Y"
 rtrojan(){
-read -p "Melihat Hasil Convert ? (y/n) " an
-if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/trojan.yaml
-else
-echo -e "kembali ke halaman awal..."
-sleep 2
-sh /sbin/tools
-exit
-fi
 }
 echo -e "$Y"
 rvless(){
-read -p "Melihat Hasil Convert ? (y/n) " an
-if [[ $an == "y" || $an == "Y"  ]]; then
 echo -e "Looking for Config"
 sleep 2
 clear
 cat /etc/openclash/vless.yaml
-else
-echo -e "kembali ke halaman awal..."
-sleep 2
-sh /sbin/tools
-exit
-fi
 }
 up(){
 echo -e "Updating Tools"
