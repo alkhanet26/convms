@@ -6,8 +6,6 @@ Tools ini berfungsi sebagai converter link encode ``vmess-ws`` ``trojan-ws`` ``v
 
 dependencies yang di perlukan
 - node-npm
-- python3
-- python3-pip
 
 # INSTALASI YAML Converter
 Sebelum memasang tools ini pastikan jaringan internet stabil atau gunakan kuota reguler,,
@@ -80,7 +78,6 @@ echo -e "$Y"
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
 - Script v2ray-tools by [kltk](https://github.com/kltk)
-- Script jsontoyaml by [drbild](https://github.com/drbild)
 
 # Support Me
 - [Beli Kopi](https://saweria.co/alkhanet)
