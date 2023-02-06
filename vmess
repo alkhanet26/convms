@@ -52,7 +52,7 @@
 	 uuid1=$(cat /tmp/cfgvms.json | grep '"id":' | cut -d: -f2 | cut -d'"' -f2 | awk 'NR==1')
 	 alterid1=$(cat /tmp/cfgvms.json | grep alterId | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
 	 chiper1=$(cat /tmp/cfgvms.json | grep security | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
-	 tls1=$(cat /tmp/cfgvms.json | grep security | cut -d: -f2| cut -d'"' -f2 | awk 'NR==2' | sed 's+tls+true+g' | sed 's+none+false+g')
+	 tls1=$(cat /tmp/cfgvms.json | grep security | cut -d: -f2| cut -d'"' -f2 | awk 'NR==2' | sed 's+tls+true+g' | sed 's+null,+false+g')
 	 #skip1=$(cat /tmp/cfgvms.json | grep type | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
 	 #servername1=$(cat /tmp/cfgvms.json | grep type | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
 	 network1=$(cat /tmp/cfgvms.json | grep network | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
