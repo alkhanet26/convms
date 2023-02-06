@@ -12,7 +12,7 @@
 	 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1 | cut -d# -f1)
 	 path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' < /tmp/vls.yaml | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3F+/+g' | sed 's+%3f+/+g' | sed 's+%3D+/+g' | sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
 	 host1=$(cat /tmp/vls.yaml | awk -F 'host=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1)
-	 petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
+	 #petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
 	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
 
 	 printoutws(){
@@ -27,7 +27,7 @@
 	 echo -e "  servername: $bug1"
 	 echo -e "  network: $network1"
 	 echo -e "  ws-opts:"
-	 echo -e "    path: $petik$path1$petik"
+	 echo -e "    path: $path1"
 	 echo -e "    headers:"
 	 echo -e "      Host: $address1"
 	 echo -e "  udp: true"
@@ -47,7 +47,7 @@
 	 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1 | cut -d# -f1)
 	 path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' < /tmp/vls.yaml | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3F+/+g' | sed 's+%3f+/+g' | sed 's+%3D+/+g' | sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
 	 host1=$(cat /tmp/vls.yaml | awk -F 'host=' '{print $2}' < /tmp/vls.yaml | cut -d'&' -f1)
-	 petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
+	 #petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
 	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
 
 	 printoutwsr(){
@@ -62,7 +62,7 @@
 	 echo -e "  servername: $address1"
 	 echo -e "  network: $network1"
 	 echo -e "  ws-opts:"
-	 echo -e "    path: $petik$path1$petik"
+	 echo -e "    path: $path1"
 	 echo -e "    headers:"
 	 echo -e "      Host: $address1"
 	 echo -e "  udp: true"
