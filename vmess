@@ -17,7 +17,7 @@
 	 path1=$(cat /tmp/cfgvms.json | grep '"path": ' | awk 'NR==1' | cut -d'"' -f4)
 	 host1=$(cat /tmp/cfgvms.json | grep Host | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
 	 udp1=$(cat /tmp/cfgvms.json | grep udp | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1' | sed 's+,++g' )
-	 petik=$(cat /tmp/cfgvms.json | grep -o '"' | awk 'NR==1')
+	 #petik=$(cat /tmp/cfgvms.json | grep -o '"' | awk 'NR==1')
 	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
 
 	 printoutws(){
@@ -34,7 +34,7 @@
 	 echo -e "  servername: $bug1"
 	 echo -e "  network: $network1"
 	 echo -e "  ws-opts:"
-	 echo -e "    path: $petik$path1$petik"
+	 echo -e "    path: $path1"
 	 echo -e "    headers:"
 	 echo -e "      Host: $host1"
 	 echo -e "  udp:$udp1"
@@ -59,7 +59,7 @@
 	 path1=$(cat /tmp/cfgvms.json | grep '"path": ' | awk 'NR==1' | cut -d'"' -f4)
 	 host1=$(cat /tmp/cfgvms.json | grep Host | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1')
 	 udp1=$(cat /tmp/cfgvms.json | grep udp | cut -d: -f2| cut -d'"' -f2 | awk 'NR==1' | sed 's+,++g' )
-	 petik=$(cat /tmp/cfgvms.json | grep -o '"' | awk 'NR==1')
+	 #petik=$(cat /tmp/cfgvms.json | grep -o '"' | awk 'NR==1')
 	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
 
 	 printoutwsr(){
