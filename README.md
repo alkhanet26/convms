@@ -44,7 +44,7 @@ echo -e "$DB ******************************************************"
 echo -e "$Y"
 ```
 
-lalu akan muncul perintah untuk convert nya
+lalu ketik perintah untuk convert nya
 ```
 tools v
 ```
