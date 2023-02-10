@@ -1,16 +1,23 @@
 #!/bin/bash
 # This Script by Alkhanet (http://github.com/alkhanet26)
 
-
-
 {
+echo -e "Installation dependencies"
+sleep 2
 opkg update && opkg install node-npm
 npm i --package-lock-only && npm audit fix --force
 npm -g install v2ray-tools
+clear
+echo -e "Downloading binaries"
+sleep 2
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 7777 /sbin/vmess
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 7777 /sbin/ctrojan
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 7777 /sbin/vless
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/base.json" -O /usr/lib/node_modules/v2ray-tools/src/base.json && chmod 644 /usr/lib/node_modules/v2ray-tools/src/base.json
+clear
+echo -e "Installation is completed"
+sleep 3
+sh /sbin/tools
 }
