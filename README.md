@@ -63,6 +63,10 @@ Untuk update tools ini ketik
 update
 ```
 
+# INFORMATION
+- Jika ada Pertanyaan ``Reverse? (y/n)``
+  -> y = mode websocket bolak-balik (salto)
+  -> n = mode websocket sni biasa
 
 # CHANGELOG
 - Fix All Format Config openclash
