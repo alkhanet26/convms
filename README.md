@@ -67,6 +67,7 @@ update
 - Jika ada Pertanyaan ``Reverse? (y/n)`` maka
 
   -> y = mode websocket bolak-balik (salto)
+  
   -> n = mode websocket sni biasa
 
 # CHANGELOG
