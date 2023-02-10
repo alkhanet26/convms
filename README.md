@@ -11,14 +11,8 @@ dependencies yang di perlukan
 Sebelum memasang tools ini pastikan jaringan internet stabil atau gunakan kuota reguler,,
 ketik atau copy ini ke terminal
 ```
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/inconvms" -O /tmp/inconvms && chmod +x /tmp/inconvms
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/inconvms" -O /tmp/inconvms && chmod +x /tmp/inconvms && cd /tmp && sh inconvms
 ```
-
-lalu ketik
-```
-cd /tmp && sh inconvms
-```
-
 tunggu sampai selesai
 
 ketika sudah selesai di coba ketik
