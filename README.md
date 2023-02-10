@@ -13,30 +13,8 @@ ketik atau copy ini ke terminal
 ```
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/inconvms" -O /tmp/inconvms && chmod +x /tmp/inconvms && cd /tmp && sh inconvms
 ```
-tunggu sampai selesai
+tunggu sampai selesai dan muncul
 
-ketika sudah selesai di coba ketik
-```
-tools
-```
-lalu akan muncul perintah untuk convert nya
-```
-tools v
-```
-dan akan muncul perintah masukan url / link encode vmess
-
-setelah selesai,,,
-config ``vmess.yaml`` akan berada di folder ``/etc/openclash/vmess.yaml``
-atau ketik di terminal
-```
-tools vm
-```
-silahkan di copy isinya untuk di paste dan disesuaikan dengan format config vmess di openclash
-
-Untuk update tools ini ketik 
-```
-toos up
-```
 ```
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
@@ -66,8 +44,28 @@ echo -e "$DB ******************************************************"
 echo -e "$Y"
 ```
 
+lalu akan muncul perintah untuk convert nya
+```
+tools v
+```
+Kemudian ikuti perintah yang akan muncul di terminal
+
+setelah selesai,,,
+config ``vmess.yaml`` akan berada di folder ``/etc/openclash/vmess.yaml``
+atau ketik di terminal
+```
+tools vm
+```
+silahkan di copy isinya untuk di paste dan disesuaikan dengan format config vmess di openclash
+
+Untuk update tools ini ketik 
+```
+update
+```
+
+
 # CHANGELOG
-- Adding trojan-gfw
+- Fix All Format Config openclash
 
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
