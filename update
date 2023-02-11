@@ -1,6 +1,6 @@
 #!/bin/bash
 #This script by AlkhaNET (http://github.com/alkhanet26)
-# VERSION ALPHA 2.6a
+# VERSION ALPHA 2.7
 
 
 {
@@ -8,8 +8,8 @@ echo "Checking Version"
 sleep 3
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/versi_yaml" -O /tmp/versi_yaml && chmod +x /tmp/versi_yaml
 clear
-an=$(grep -o 'VERSION 2.6a' /tmp/versi_yaml | awk -F 'VERSION ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
-in=$(grep -o 'VERSION ALPHA 2.6a' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
+an=$(grep -o 'VERSION 2.7' /tmp/versi_yaml | awk -F 'VERSION ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
+in=$(grep -o 'VERSION ALPHA 2.7' /sbin/tools | awk -F 'VERSION ALPHA ' '{print $2}' | cut -d' ' -f1 | awk 'NR==1')
 if [[ $an == $in ]]; then
 clear
 echo -e "YAML Converter Sudah Versi Terbaru"
