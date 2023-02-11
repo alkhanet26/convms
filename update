@@ -21,8 +21,8 @@ else
 echo -e "Updating YAML Converter"
 sleep 1
 clear
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
-wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 777 /sbin/update
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 777 /sbin/tools
 clear
 sleep 2
 rm /tmp/versi_yaml
