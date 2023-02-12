@@ -2,8 +2,6 @@
 #This script by AlkhaNET (http://github.com/alkhanet26)
 # VERSION ALPHA 2.7
 
-
-{
 echo "Checking Version"
 sleep 3
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/versi_yaml" -O /tmp/versi_yaml && chmod +x /tmp/versi_yaml
@@ -28,4 +26,3 @@ sleep 2
 rm /tmp/versi_yaml
 /sbin/tools up
 fi
-}
