@@ -8,7 +8,7 @@
 	port1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
 	type1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1' | cut -d'-' -f1)
 	password1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d@ -f1 | cut -d/ -f3)
-	network1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1)
+	network1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d'#' -f1)
 	path1=$(cat /tmp/tjn.yaml | awk -F 'path=' '{print $2}' | sed 's+%2F+/+g' | cut -d'&' -f1 | cut -d# -f1)
 	host1=$(cat /tmp/tjn.yaml | awk -F 'host=' '{print $2}' | cut -d'&' -f1)
 	bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
@@ -40,7 +40,7 @@
 	port1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
 	type1=$(cat /tmp/tjn.yaml | grep trojan | cut -d: -f1| awk 'NR==1' | cut -d'-' -f1)
 	password1=$(cat /tmp/tjn.yaml | grep trojan /tmp/tjn.yaml | cut -d@ -f1 | cut -d/ -f3)
-	network1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1)
+	network1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d'#' -f1)
 	path1=$(cat /tmp/tjn.yaml | awk -F 'path=' '{print $2}' | sed 's+%2F+/+g' | cut -d'&' -f1 | cut -d# -f1)
 	host1=$(cat /tmp/tjn.yaml | awk -F 'host=' '{print $2}' | cut -d'&' -f1)
 	bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
@@ -96,7 +96,7 @@ echo -e "b="$b > /tmp/bugs
 clear
 read -p "Masukan Url (ex:trojan://xxx) : " link
 echo $link > /tmp/tjn.yaml
-jenis1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1)
+jenis1=$(cat /tmp/tjn.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d'#' -f1)
 
 if [[ "$jenis1" = "ws" ]]; then
 	read -p "Reverse Mode : (y/n)" an
