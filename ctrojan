@@ -17,7 +17,7 @@
 	echo -e "proxies: "
 	echo -e "- name: $name1-$network1"
 	echo -e "  type: $type1"
-	echo -e "  server: $host1"
+	echo -e "  server: $address1"
 	echo -e "  port: $port1"
 	echo -e "  password: $password1"
 	echo -e "  sni: $bug1"
@@ -26,7 +26,7 @@
 	echo -e "  ws-opts:"
 	echo -e "    path: $path1"
 	echo -e "    headers:"
-	echo -e "      Host: $host1"
+	echo -e "      Host: $address1"
 	echo -e "  udp: true"
 	}
 	printoutws > /etc/openclash/trojan.yaml
@@ -52,13 +52,13 @@
 	echo -e "  server: $bug1"
 	echo -e "  port: $port1"
 	echo -e "  password: $password1"
-	echo -e "  sni: $host1"
+	echo -e "  sni: $address1"
 	echo -e "  skip-cert-verify: true"
 	echo -e "  network: $network1"
 	echo -e "  ws-opts:"
 	echo -e "    path: $path1"
 	echo -e "    headers:"
-	echo -e "      Host: $host1"
+	echo -e "      Host: $address1"
 	echo -e "  udp: true"
 	}
 	printoutwsr > /etc/openclash/trojan.yaml
