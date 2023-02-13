@@ -36,14 +36,13 @@ echo -e "$DB **$G Update Converter Tools             *    update   $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET             $DB**"
 echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
-echo -e "$DB **$B                VERSION ALPHA 2.7                 $DB**"
+echo -e "$DB **$B                VERSION ALPHA 2.9                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$R                     CHANGELOG                    $DB**"
-echo -e "$DB **$R - fix convert available for trojan-go            $DB**"
-echo -e "$DB **$R - fix convert vless                              $DB**"
+echo -e "$DB **$R - fix some link format trojan                    $DB**"
+echo -e "$DB **$R                                                  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
-echo -e "$Y"
 ```
 
 # PENGGUNAAN YAML Converter
@@ -75,6 +74,7 @@ update
 
 # CHANGELOG
 - Fix All Format Config openclash
+- Fix some format url (trojan, trojan-go)
 
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
