@@ -1,0 +1,213 @@
+#!/bin/bash
+#This Script by ALKHANET (http://github.com/alkhanet26)
+
+
+clear
+#-- colors --#
+#R='\e[1;31m' #RED
+#G='\e[1;32m' #GREEN
+#B='\e[1;34m' #BLUE
+#Y='\e[1;33m' #YELLOW
+#C='\e[1;36m' #CYAN
+W='\e[1;37m' #WHITE
+##############
+
+#-- colors v2 --#
+R='\e[31;1m' #RED
+G='\e[32;1m' #GREEN
+Y='\e[33;1m' #YELLOW
+DB='\e[34;1m' #DARKBLUE
+P='\e[35;1m' #PURPLE
+LB='\e[36;1m' #LIGHTBLUE
+
+#-- colors v3 --#
+BR='\e[3;31m' #RED
+BG='\e[3;32m' #GREEN
+BY='\e[3;33m' #YELLOW
+BDB='\e[3;34m' #DARKBLUE
+BP='\e[3;35m' #PURPLE
+BLB='\e[3;36m' #LIGHTBLUE
+
+echo -e "$Y"
+vms(){
+read -p "Ingin Convert Vmess ? (y/n) " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+/sbin/vmess
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+echo -e "$Y"
+tj(){
+read -p "Ingin Convert Trojan ? (y/n) " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+/sbin/ctrojan
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+echo -e "$Y"
+vl(){
+read -p "Ingin Convert Vless ? (y/n) " an
+if [[ $an == "y" || $an == "Y"  ]]; then
+/sbin/vless
+else
+echo -e "kembali ke halaman awal..."
+sleep 2
+sh /sbin/tools
+exit
+fi
+}
+echo -e "$Y"
+rvmess(){
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/vmess.yaml
+}
+echo -e "$Y"
+rtrojan(){
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/trojan.yaml
+}
+echo -e "$Y"
+rvless(){
+echo -e "Looking for Config"
+sleep 2
+clear
+cat /etc/openclash/vless.yaml
+}
+up(){
+echo -e "Updating Tools"
+sleep 2
+clear
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 777 /sbin/vmess
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 777 /sbin/ctrojan
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 777 /sbin/vless
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/base.json" -O /usr/lib/node_modules/v2ray-tools/src/base.json && chmod 644 /usr/lib/node_modules/v2ray-tools/src/base.json
+clear
+echo -e "Update Finished"
+sleep 2
+/sbin/tools
+}
+
+
+
+banner(){
+clear
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e " **                                                  **"
+echo -e "$DB **$R          SELAMAT DATANG YAML CONVERTER           $DB**"
+echo -e "$DB **$R                WEBSOCKET VERSION                 $DB**"
+echo -e " **                                                  **"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y                    ALKHANET                      $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
+echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
+echo -e "$DB **$G Convert trojan to yaml             *    tools t  $DB**"
+echo -e "$DB **$G Convert vless to yaml              *    tools vl $DB**"
+echo -e "$DB **$G Melihat hasil convert (vmess)      *    tools vm $DB**"
+echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
+echo -e "$DB **$G Melihat hasil convert (vless)      *    tools vls$DB**"
+echo -e "$DB **$G Update Converter Tools             *    update   $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET             $DB**"
+echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
+echo -e "$DB **$B                VERSION ALPHA 3.1                 $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$R                     CHANGELOG                    $DB**"
+echo -e "$DB **$R - Final Release (WS - TCP - GRPC)                $DB**"
+echo -e "$DB **$R                                                  $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e "$Y"
+}
+
+case $1 in
+"v")
+vms;exit
+;;
+esac
+
+case $1 in
+"t")
+tj;exit
+;;
+esac
+
+case $1 in
+"vl")
+vl;exit
+;;
+esac
+
+case $1 in
+"vm")
+rvmess;exit
+;;
+esac
+
+case $1 in
+"tj")
+rtrojan;exit
+;;
+esac
+
+case $1 in
+"vls")
+rvless;exit
+;;
+esac
+
+case $1 in
+"up")
+up;exit
+;;
+esac
+
+case $1 in
+"update")
+/sbin/update;exit
+;;
+esac
+
+clear
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e " **                                                  **"
+echo -e "$DB **$R          SELAMAT DATANG YAML CONVERTER           $DB**"
+echo -e "$DB **$R                WEBSOCKET VERSION                 $DB**"
+echo -e " **                                                  **"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y                    ALKHANET                      $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$G        DAFTAR :                    *  PERINTAH : $DB**"
+echo -e "$DB **$G Convert vmess to yaml              *    tools v  $DB**"
+echo -e "$DB **$G Convert trojan to yaml             *    tools t  $DB**"
+echo -e "$DB **$G Convert vless to yaml              *    tools vl $DB**"
+echo -e "$DB **$G Melihat hasil convert (vmess)      *    tools vm $DB**"
+echo -e "$DB **$G Melihat hasil convert (trojan)     *    tools tj $DB**"
+echo -e "$DB **$G Melihat hasil convert (vless)      *    tools vls$DB**"
+echo -e "$DB **$G Update Converter Tools             *    update   $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET             $DB**"
+echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
+echo -e "$DB **$B                VERSION ALPHA 3.1                 $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB **$R                     CHANGELOG                    $DB**"
+echo -e "$DB **$R - Final Release (WS - TCP - GRPC)                $DB**"
+echo -e "$DB **$R                                                  $DB**"
+echo -e "$DB ******************************************************"
+echo -e "$DB ******************************************************"
+echo -e "$Y"
+exit
