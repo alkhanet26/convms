@@ -25,4 +25,4 @@ clear
 sleep 2
 rm /tmp/versi_yaml
 /sbin/tools up
-fi
+fi 
