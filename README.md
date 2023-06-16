@@ -36,11 +36,10 @@ echo -e "$DB **$G Update Converter Tools             *    update   $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$Y           YAML CONVERTER BY ALKHANET             $DB**"
 echo -e "$DB **$Y        FORMAT OPENCLASH BY VITO HARHARI          $DB**"
-echo -e "$DB **$B                VERSION ALPHA 3.0                $DB**"
+echo -e "$DB **$B                VERSION ALPHA 3.1                 $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB **$R                     CHANGELOG                    $DB**"
-echo -e "$DB **$R - adding vmess-tcp                               $DB**"
-echo -e "$DB **$R - adding script export to proxy_provider         $DB**"
+echo -e "$DB **$R - Final Release (WS - TCP - GRPC)                $DB**"
 echo -e "$DB **$R                                                  $DB**"
 echo -e "$DB ******************************************************"
 echo -e "$DB ******************************************************"
@@ -74,8 +73,7 @@ update
   -> n = mode websocket sni biasa
 
 # CHANGELOG
-- Fix All Format Config openclash
-- Fix some format url (trojan, trojan-go)
+- Final Release ( WS - TCP - GRPC )
 
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
