@@ -5,17 +5,23 @@
 echo -e "Installation dependencies"
 sleep 2
 opkg update && opkg install node-npm
-npm i --package-lock-only && npm audit fix --force
 npm -g install v2ray-tools
+npm i --package-lock-only && npm audit fix --force
 clear
 echo -e "Downloading binaries"
 sleep 2
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 7777 /sbin/vmess
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 7777 /sbin/ctrojan
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 7777 /sbin/vless
-wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/base.json" -O /usr/lib/node_modules/v2ray-tools/src/base.json && chmod 644 /usr/lib/node_modules/v2ray-tools/src/base.json
+echo -e "=     15%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 7777 /sbin/tools
+sleep 1
+echo -e "==    30%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/update" -O /sbin/update && chmod 7777 /sbin/update
+sleep 1
+echo -e "===   45%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 7777 /sbin/vmess
+sleep 1
+echo -e "====  60%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 7777 /sbin/ctrojan
+sleep 1
+echo -e "===== 75%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 7777 /sbin/vless
+sleep 2
+echo -e "======100%" && wget -q "https://raw.githubusercontent.com/alkhanet26/convms/main/base.json" -O /usr/lib/node_modules/v2ray-tools/src/base.json && chmod 644 /usr/lib/node_modules/v2ray-tools/src/base.json
+sleep 3
 clear
 echo -e "Installation is completed"
 sleep 3
