@@ -4,9 +4,7 @@
 {
 echo -e "Installation dependencies"
 sleep 2
-opkg update && opkg install node-npm
-npm -g install v2ray-tools
-npm i --package-lock-only && npm audit fix --force
+opkg update && opkg install ruby-base64
 clear
 echo -e "Downloading binaries"
 sleep 2
