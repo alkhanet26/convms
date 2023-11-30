@@ -5,7 +5,7 @@
 Tools ini berfungsi sebagai converter link encode ``vmess-ws`` ``trojan-ws`` ``vless-ws`` menjadi format yaml untuk openclash
 
 dependencies yang di perlukan
-- node-npm
+- ruby-base64
 
 # INSTALASI YAML Converter
 Sebelum memasang tools ini pastikan jaringan internet stabil atau gunakan kuota reguler,,
