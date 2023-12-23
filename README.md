@@ -14,6 +14,10 @@ ketik atau copy ini ke terminal
 wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/inconvms" -O /tmp/inconvms && chmod +x /tmp/inconvms && cd /tmp && sh inconvms
 ```
 tunggu sampai selesai dan muncul
+Add jika setelah selesai installasi dan ketika mau digunakan ada bug kembali ke menu utama silahkan copy command berikut
+```
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/fixcvms" -O /tmp/fixcvms && chmod +x /tmp/fixcvms && cd /tmp && sh fixcvms
+```
 
 ```
 echo -e "$DB ******************************************************"
@@ -77,7 +81,6 @@ update
 
 # Credit
 - Script Yaml to openclash yaml by [Vito Harhari](https://github.com/vitoharhari)
-- Script v2ray-tools by [kltk](https://github.com/kltk)
 
 # Support Me
 - [Beli Kopi](https://saweria.co/alkhanet)
