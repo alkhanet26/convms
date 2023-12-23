@@ -1,0 +1,14 @@
+#!/bin/bash
+#This Script by ALKHANET (http://github.com/alkhanet26)
+
+{
+echo -e "Downloading Binaries Files"
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vmess" -O /sbin/vmess && chmod 777 /sbin/vmess
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/ctrojan" -O /sbin/ctrojan && chmod 777 /sbin/ctrojan
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/vless" -O /sbin/vless && chmod 777 /sbin/vless
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/convms/main/tools" -O /sbin/tools && chmod 777 /sbin/tools
+echo -e "Download Completed"
+sleep 5
+clear
+bash --login
+}
