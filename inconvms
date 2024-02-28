@@ -4,7 +4,7 @@
 {
 echo -e "Installation dependencies"
 sleep 2
-opkg update && opkg install ruby-base64
+opkg update && opkg install ruby-base64 coreutils-base64
 clear
 echo -e "Downloading binaries"
 sleep 2
