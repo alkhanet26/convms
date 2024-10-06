@@ -1,0 +1,199 @@
+#!/bin/bash
+# This Script by Alkhanet (http://github.com/alkhanet26)
+
+#-- colors --#
+#R='\e[1;31m' #RED
+#G='\e[1;32m' #GREEN
+#B='\e[1;34m' #BLUE
+#Y='\e[1;33m' #YELLOW
+#C='\e[1;36m' #CYAN
+W='\e[1;37m' #WHITE
+##############
+
+#-- colors v2 --#
+R='\e[31;1m' #RED
+G='\e[32;1m' #GREEN
+Y='\e[33;1m' #YELLOW
+DB='\e[34;1m' #DARKBLUE
+P='\e[35;1m' #PURPLE
+LB='\e[36;1m' #LIGHTBLUE
+
+#-- colors v3 --#
+BR='\e[3;31m' #RED
+BG='\e[3;32m' #GREEN
+BY='\e[3;33m' #YELLOW
+BDB='\e[3;34m' #DARKBLUE
+BP='\e[3;35m' #PURPLE
+BLB='\e[3;36m' #LIGHTBLUE
+
+
+	function ws(){
+	 name1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d# -f2)
+	 address1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f2 | cut -d: -f1)
+	 port1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
+	 type1=$(cat /tmp/vls.yaml | grep vless | cut -d: -f1| awk 'NR==1')
+	 uuid1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f1 | cut -d/ -f3)
+	 tls1=$(cat /tmp/vls.yaml | grep vless | cut -d= -f3 | cut -d'&' -f1 | sed 's+tls+true+g' | sed 's+none+false+g' | sed 's+ws+false+g')
+	 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d# -f1)
+	 path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3F+/+g' | sed 's+%3f+/+g' | sed 's+%3D+/+g' | sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
+	 host1=$(cat /tmp/vls.yaml | awk -F '@' '{print $2}' | cut -d':' -f1)
+	 #petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
+	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
+	 ifname1=$(grep '=' /tmp/ifname | cut -d'=' -f2)
+
+	 printoutws(){
+	 echo ""
+	 echo -e "- name: $type1-$host1"
+	 echo -e "  type: $type1"
+	 echo -e "  server: $host1"
+	 echo -e "  port: $port1"
+	 echo -e "  uuid: $uuid1"
+	 echo -e "  skip-cert-verify: true"
+	 echo -e "  tls: $tls1"
+	 echo -e "  servername: $bug1"
+	 echo -e "  network: $network1"
+	 echo -e "  ws-opts:"
+	 echo -e "    path: $path1"
+	 echo -e "    headers:"
+	 echo -e "      Host: $host1"
+	 echo -e "  udp: true"
+	 echo -e "  interface-name: $ifname1"
+	 }
+	 printoutws > /etc/openclash/vless.yaml
+	}
+
+	function wsr(){
+	 name1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d# -f2)
+	 address1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f2 | cut -d: -f1)
+	 port1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
+	 type1=$(cat /tmp/vls.yaml | grep vless | cut -d: -f1| awk 'NR==1')
+	 uuid1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f1 | cut -d/ -f3)
+	 tls1=$(cat /tmp/vls.yaml | grep vless | cut -d= -f3 | cut -d'&' -f1 | sed 's+tls+true+g' | sed 's+none+false+g' | sed 's+ws+false+g')
+	 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d# -f1)
+	 path1=$(cat /tmp/vls.yaml | awk -F 'path=' '{print $2}' | sed 's+%2F+/+g' | sed 's+%2f+/+g' | sed 's+%3F+/+g' | sed 's+%3f+/+g' | sed 's+%3D+/+g' | sed 's+%3d+/+g' | cut -d'&' -f1 | cut -d# -f1)
+	 host1=$(cat /tmp/vls.yaml | awk -F '@' '{print $2}' | cut -d':' -f1)
+	 #petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
+	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
+	 ifname1=$(grep '=' /tmp/ifname | cut -d'=' -f2)
+
+	 printoutwsr(){
+	 echo ""
+	 echo -e "- name: $type1-$host1"
+	 echo -e "  type: $type1"
+	 echo -e "  server: $bug1"
+	 echo -e "  port: $port1"
+	 echo -e "  uuid: $uuid1"
+	 echo -e "  skip-cert-verify: true"
+	 echo -e "  tls: $tls1"
+	 echo -e "  servername: $host1"
+	 echo -e "  network: $network1"
+	 echo -e "  ws-opts:"
+	 echo -e "    path: $path1"
+	 echo -e "    headers:"
+	 echo -e "      Host: $host1"
+	 echo -e "  udp: true"
+	 echo -e "  interface-name: $ifname1"
+	 }
+	 printoutwsr > /etc/openclash/vless.yaml
+	}
+
+	function grpc(){
+	 name1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d# -f2)
+	 address1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f2 | cut -d: -f1)
+	 port1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d: -f3 | cut -d/ -f1 | cut -d? -f1)
+	 type1=$(cat /tmp/vls.yaml | grep vless | cut -d: -f1| awk 'NR==1')
+	 uuid1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d@ -f1 | cut -d/ -f3)
+	 tls1=$(cat /tmp/vls.yaml | grep vless | cut -d= -f3 | cut -d'&' -f1 | sed 's+tls+true+g' | sed 's+none+false+g' | sed 's+ws+false+g')
+	 network1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d# -f1)
+	 #path1=$(cat /tmp/vls.yaml | grep vless /tmp/vls.yaml | cut -d'&' -f5 | cut -d= -f2)
+	 host1=$(cat /tmp/vls.yaml | awk -F '@' '{print $2}' | cut -d':' -f1)
+	 #petik=$(cat /tmp/vls.yaml | grep -o : | awk 'NR==1' | sed 's+:+"+g')
+	 bug1=$(grep '=' /tmp/bugs | cut -d'=' -f2)
+	 ifname1=$(grep '=' /tmp/ifname | cut -d'=' -f2)
+
+	 printoutgrpc(){
+	 echo ""
+	 echo -e "- name: $type1-$host1"
+	 echo -e "  type: $type1"
+	 echo -e "  server: $host1"
+	 echo -e "  port: $port1"
+	 echo -e "  uuid: $uuid1"
+	 echo -e "  skip-cert-verify: true"
+	 echo -e "  tls: $tls1"
+	 echo -e "  servername: $bug1"
+	 echo -e "  network: $network1"
+	 echo -e "  grpc-opts:"
+	 echo -e "  grpc-mode: gun"
+	 echo -e "  grpc-service-name: $sname"
+	 echo -e "  udp: true"
+	 echo -e "  interface-name: $ifname1"
+	 }
+	 printoutgrpc > /etc/openclash/vless.yaml
+	}
+
+
+function nginput(){
+read -p "Masukan Bug provider (host/ip) : " b
+echo -e "b="$b > /tmp/bugs
+clear
+read -p "Masukan interface name (ex: eth1/wwan0/modem) : " if
+echo -e "if="$if > /tmp/ifname
+clear
+read -p "Masukan Url (ex:vless://xxx) : " link
+echo $link > /tmp/vls.yaml
+jenis1=$(cat /tmp/vls.yaml | awk -F 'type=' '{print $2}' | cut -d'&' -f1 | cut -d# -f1)
+
+if [[ "$jenis1" = "ws" ]]; then
+	read -p "Reverse Mode (y/n) : " an
+	if [[ $an == "y" || $an == "Y" ]]; then
+	wsr
+	else
+	ws
+	fi
+elif [[ "$jenis1" = "grpc" ]]; then
+read -p "Masukan Service-Name : " sname
+grpc
+fi
+
+}
+
+function ngexport(){
+	read -p "Tambahkan otomatis config ke proxy_provider? (y/n) : " pp
+	if [[ $pp == "y" || $pp == "Y" ]]; then
+		echo ""
+		echo -e "Berikut config yang ada di Proxy_provider"
+		sleep 2
+		echo -e "$R"
+		ls /etc/openclash/proxy_provider/
+		sleep 2
+		echo -e "$Y"
+		read -p "Masukan Nama Config di Proxy_Provider  (Contoh : alkhanet.yaml) : " nmcfg
+		echo -e "Export to Proxy Provider, please wait..."
+		
+		resprox=$(cat /etc/openclash/proxy_provider/$nmcfg | grep -o proxies)
+		if [[ $resprox == "proxies" ]]; then
+		echo -e "$G"
+		echo -e "Config Ditemukan!"
+		else
+		echo "proxies:" > /etc/openclash/proxy_provider/$nmcfg
+		fi
+
+		sleep 3
+		cat /etc/openclash/vless.yaml >> /etc/openclash/proxy_provider/$nmcfg
+		sleep 1
+		echo -e "$G"
+		echo -e "config berhasil dimasukkan ke /etc/openclash/proxy_provider/$nmcfg"
+		sleep 2
+		echo -e "kembali ke halaman awal ..."
+		sleep 2
+		/sbin/tools
+	else
+	echo -e "kembali ke halaman awal ..."
+	sleep 2
+	/sbin/tools
+	fi
+}
+
+
+nginput
+ngexport
